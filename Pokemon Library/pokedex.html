@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Added: created a dedicated Pokédex page so the search lives separately from the collection page. -->
+    <header>
+        <h1>My Pokémon Library</h1>
+        <nav id="navBar" aria-label="Primary">
+            <a href="Index.html">Home</a>
+            <a href="Index.html#add">Add a Pokémon</a>
+            <a href="Index.html#list">My Collection</a>
+            <a href="pokedex.html">Pokédex Search</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dex" aria-labelledby="dex-heading">
+            <h2 id="dex-heading">Pokédex Search</h2>
+            <div class="controls dex-controls">
+                <label for="dex-search">Find Pokémon:</label>
+                <input id="dex-search" type="search" list="pokemon-options" autocomplete="off" placeholder="Type a Pokémon name">
+                <datalist id="pokemon-options"></datalist>
+                <button type="button" id="dex-search-btn">Search</button>
+            </div>
+            <div id="dex-result" class="dex-result">
+                <p>Search for a Pokémon to see its name, type, and sprite.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pokémon Library. All rights reserved.</p>
+    </footer>
+
+    <script src="code.js"></script>
+</body>
+</html>

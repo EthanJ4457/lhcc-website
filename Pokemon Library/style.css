@@ -1,0 +1,365 @@
+:root {
+    /* Added: replaced the original mixed palette with Master Ball colours. */
+    --bg: #24113f;
+    --ink: #24152f;
+    --accent: #c026d3;
+    --space: 1rem;
+    --card: #fffaff;
+    --masterball-purple: #7e22ce;
+    --masterball-magenta: #c026d3;
+    --masterball-white: #fffaff;
+    --masterball-ink: #24152f;
+}
+
+/* Added: updated the page styling to match a Pokémon library theme. */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: system-ui, sans-serif;
+    /* Added: created a violet Master Ball atmosphere for every page. */
+    background: linear-gradient(135deg, #24113f 0%, #4c1d95 48%, #86198f 100%);
+    color: #fffaff;
+    min-height: 100vh;
+}
+
+/* Added: kept page-level text readable against the deep Master Ball background. */
+h2,
+footer {
+    color: #fffaff;
+}
+
+main{
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: calc(var(--space) * 1.5);
+
+}
+
+/* Added: restyled the title bar with the Master Ball's purple and magenta colours. */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space);
+    flex-wrap: wrap;
+    padding: var(--space) 0;
+    background: linear-gradient(to left, #fffaff 0%, #e879f9 42%, #7e22ce 100%);
+    border-bottom: 4px solid #24152f;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    position: relative;
+    padding-left: 3.2rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-image: url("Images/mball.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav{
+    display: flex;
+    gap: var(--space);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 700;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: rgba(255, 250, 255, 0.7);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin: 1rem 0 1.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 250, 255, 0.92);
+    border: 2px solid rgba(192, 38, 211, 0.55);
+    border-radius: 12px;
+}
+
+.controls input,
+.controls select {
+    flex: 1 1 10rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #c084fc;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(36, 21, 47, 0.08);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #c026d3;
+    box-shadow: 0 0 0 3px rgba(192, 38, 211, 0.2);
+}
+
+/* Added: created a Pokédex badge style and favorite controls for each card. */
+.dex-badge {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0.55rem;
+    background: #7e22ce;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: 999px;
+}
+
+.favorite-toggle {
+    margin-top: 0.75rem;
+    background: #f5d0fe;
+    color: #581c87;
+    border-color: #c026d3;
+}
+
+.favorite-toggle.is-favorite {
+    background: #c026d3;
+    color: #fffaff;
+    border-color: #701a75;
+}
+
+/* Added: styled the Pokédex card so it looks more like a game result panel. */
+.dex-result {
+    max-width: 28rem;
+    padding: 1.25rem;
+    background: linear-gradient(to bottom, #fae8ff, #ddd6fe);
+    border: 3px solid rgba(126, 34, 206, 0.8);
+    border-radius: 16px;
+    min-height: 11rem;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.dex-result h3 {
+    margin: 0.5rem 0 0.4rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.dex-result p {
+    margin: 0.25rem 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dex-result img {
+    display: block;
+    width: 7rem;
+    height: auto;
+    margin: 0 auto 0.75rem;
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.15));
+}
+
+#list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--space);
+}
+
+.pokemon-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--space);
+}
+
+.pokemon-list img{
+    width: 15rem;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.75rem;
+}
+
+.pokemon-list article{
+    padding: var(--space);
+    background: var(--card);
+    background-image: linear-gradient(to bottom, #fae8ff, #ede9fe);
+    border: 2px solid #7e22ce;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    color: var(--masterball-ink);
+}
+
+.pokemon-card[data-status="caught"] {
+    background-image: linear-gradient(to bottom, #e9d5ff, #f5d0fe);
+}
+
+.pokemon-card[data-status="favorite"] {
+    background-image: linear-gradient(to bottom, #f5d0fe, #e879f9);
+}
+
+.pokemon-card[data-status="wishlist"] {
+    background-image: linear-gradient(to bottom, #ede9fe, #c4b5fd);
+}
+
+/* Added: match each collection card to its Pokémon type colours. */
+.pokemon-card[data-type*="water"] {
+    background-image: linear-gradient(135deg, #bae6fd, #2563eb);
+}
+
+.pokemon-card[data-type*="fire"] {
+    background-image: linear-gradient(135deg, #fed7aa, #dc2626);
+}
+
+.pokemon-card[data-type*="grass"] {
+    background-image: linear-gradient(135deg, #bbf7d0, #16a34a);
+}
+
+.pokemon-card[data-type*="electric"] {
+    background-image: linear-gradient(135deg, #fef08a, #eab308);
+}
+
+.pokemon-card[data-type*="psychic"] {
+    background-image: linear-gradient(135deg, #fbcfe8, #db2777);
+}
+
+.pokemon-card[data-type*="poison"] {
+    background-image: linear-gradient(135deg, #e9d5ff, #9333ea);
+}
+
+.pokemon-card[data-type*="ground"] {
+    background-image: linear-gradient(135deg, #fde68a, #a16207);
+}
+
+.pokemon-card[data-type*="flying"] {
+    background-image: linear-gradient(135deg, #e0e7ff, #6366f1);
+}
+
+.pokemon-card[data-type*="normal"] {
+    background-image: linear-gradient(135deg, #f5f5f4, #a8a29e);
+}
+
+.pokemon-card[data-type*="bug"] {
+    background-image: linear-gradient(135deg, #d9f99d, #65a30d);
+}
+
+.pokemon-card[data-type*="rock"] {
+    background-image: linear-gradient(135deg, #e7e5e4, #78716c);
+}
+
+.pokemon-card[data-type*="ghost"] {
+    background-image: linear-gradient(135deg, #ddd6fe, #6d28d9);
+}
+
+.pokemon-card[data-type*="fighting"] {
+    background-image: linear-gradient(135deg, #fecaca, #b91c1c);
+}
+
+.pokemon-card[data-type*="steel"] {
+    background-image: linear-gradient(135deg, #e2e8f0, #64748b);
+}
+
+.pokemon-card[data-type*="ice"] {
+    background-image: linear-gradient(135deg, #cffafe, #0891b2);
+}
+
+.pokemon-card[data-type*="dragon"] {
+    background-image: linear-gradient(135deg, #c4b5fd, #4338ca);
+}
+
+.pokemon-card[data-type*="dark"] {
+    background-image: linear-gradient(135deg, #d6d3d1, #292524);
+    color: #fffaff;
+}
+
+.pokemon-card[data-type*="fairy"] {
+    background-image: linear-gradient(135deg, #fce7f3, #ec4899);
+}
+
+/* Added: make the two-type cards show both Pokémon type colours distinctly. */
+.pokemon-card[data-type="water/ground"] {
+    background-image: linear-gradient(135deg, #2563eb 0%, #6f8f66 34%, #a16207 100%);
+}
+
+.pokemon-card[data-type="grass/poison"] {
+    background-image: linear-gradient(135deg, #16a34a 0%, #86c96b 48%, #9333ea 100%);
+}
+
+.pokemon-card[data-type="electric/flying"] {
+    background-image: linear-gradient(135deg, #eab308 0%, #facc15 52%, #6366f1 100%);
+}
+
+.pokemon-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
+    pointer-events: none;
+}
+
+form{
+    display: grid;
+    gap: 0.75rem;
+    max-width: 30rem;
+}
+
+form label {
+    color: #fffaff;
+}
+
+input, select{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #a855f7;
+    border-radius: 6px;
+}
+
+button{
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #581c87;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #d946ef, #7e22ce);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+    margin-top: 0.75rem;
+        background: linear-gradient(to bottom, #a21caf, #581c87);
+        border-color: #3b0764;
+}
+
+#grad {
+    background-image: linear-gradient(to bottom, #d946ef, #7e22ce);
+}
