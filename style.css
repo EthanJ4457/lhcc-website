@@ -32,6 +32,7 @@ a { color: inherit; }
 	justify-content: space-between;
 	padding: 1.25rem clamp(1.25rem, 5vw, 5rem);
 	color: #fff;
+	background: linear-gradient(180deg, rgba(18,35,30,0.7) 0%, rgba(18,35,30,0.38) 42%, rgba(18,35,30,0) 100%);
 }
 
 .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; font-size: 1.4rem; line-height: 1.05; letter-spacing: 0.03em; }
@@ -48,7 +49,7 @@ a { color: inherit; }
 .hero-image::before, .hero-image::after { content: ""; position: absolute; border-radius: 50%; filter: blur(1px); }
 .hero-image::before { width: 42vw; height: 42vw; right: 7%; top: 12%; background: radial-gradient(circle at 40% 35%, rgba(255,248,215,.95), rgba(255,241,190,.1) 52%, transparent 68%); }
 .hero-image::after { width: 35vw; height: 70%; left: 8%; bottom: -16%; background: linear-gradient(70deg, rgba(20,43,35,.75), rgba(53,79,64,.15)); transform: rotate(12deg); }
-.hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,34,28,.72), rgba(15,34,28,.14) 75%), linear-gradient(0deg, rgba(15,34,28,.5), transparent 55%); }
+.hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,34,28,.72), rgba(15,34,28,.14) 75%), linear-gradient(180deg, rgba(15,34,28,.3) 0%, rgba(15,34,28,.12) 30%, rgba(15,34,28,.18) 100%); }
 .hero-content { position: relative; z-index: 1; max-width: 48rem; margin-left: clamp(7rem, 16vw, 18rem); padding-top: 5rem; animation: rise-in .8s ease both; }
 .eyebrow { margin: 0 0 1.3rem; font: 0.7rem Arial, sans-serif; text-transform: uppercase; letter-spacing: .18em; }
 h1, h2 { font-weight: 400; line-height: .98; letter-spacing: -.035em; }
@@ -58,7 +59,7 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 .button-light { border-color: rgba(255,255,255,.7); }
 .button:hover, .button:focus-visible { background: #fff; color: var(--ink); }
 
-.section-shell { width: min(100% - 2.5rem, 74rem); margin: auto; }
+.section-shell { width: min(100% - 2.5rem, 74rem); padding-top: 5rem; margin: auto; }
 .inner-page { min-height: 100vh; padding: 8rem 0 6rem; background: linear-gradient(135deg, var(--cream), var(--paper)); }
 .inner-page .eyebrow { color: var(--forest); }
 .inner-page h1 { max-width: 52rem; margin: 0 0 1.5rem; color: var(--forest); font-size: clamp(3.5rem, 8vw, 7rem); }
@@ -66,7 +67,6 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 .inner-page-panel { max-width: 48rem; padding: 2rem; border-left: 3px solid var(--forest); background: rgba(255, 255, 255, .45); }
 .inner-page-panel h2 { margin-top: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
 .inner-page-panel p:last-child { margin-bottom: 0; color: var(--muted); }
-body:has(.inner-page) .site-header { position: relative; background: var(--forest); }
 .intro { padding: clamp(5rem, 12vw, 10rem) 0; text-align: center; }
 .intro h2 { max-width: 57rem; margin: auto; font-size: clamp(2.3rem, 5vw, 4.7rem); }
 .intro > p:last-child { max-width: 33rem; margin: 1.7rem auto 0; color: var(--muted); font-size: 1.05rem; }
@@ -98,6 +98,7 @@ cite { font: .7rem Arial, sans-serif; text-transform: uppercase; letter-spacing:
 		align-items: flex-start;
 		flex-wrap: wrap;
 		gap: .75rem;
+		
 	}
 	.brand {
 		max-width: 12rem;
