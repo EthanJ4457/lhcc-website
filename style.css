@@ -192,10 +192,10 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	margin-left: 0;
 	padding: 4rem 0;
 	background:
-		linear-gradient(135deg, rgba(36,55,48,0.7), rgba(87,113,101,0.65)),
+		linear-gradient(rgba(44, 77, 56, 0.604), rgba(44, 77, 56, 0.604)),
 		url('images/LHCC-group-photo.jpeg') center center / cover no-repeat;
 		background-position-y: -15rem;
-	background-color: #dfe7df;
+	background-color: #2e3d38;
 	color: #fff;
 }
 .vision-inner {
