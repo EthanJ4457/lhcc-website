@@ -10,10 +10,15 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
 
 body {
 	margin: 0;
+	width: 100%;
+	max-width: 100%;
 	color: var(--ink);
 	background: var(--cream);
 	font-family: Georgia, "Times New Roman", serif;
