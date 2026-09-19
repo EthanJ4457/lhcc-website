@@ -18,6 +18,7 @@ body {
 	background: var(--cream);
 	font-family: Georgia, "Times New Roman", serif;
 	line-height: 1.5;
+	overflow-x: hidden;
 }
 
 a { color: inherit; }
@@ -180,9 +181,10 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 }
 .vision-band {
 	position: relative;
-	width: 100vw;
+	width: 100%;
+	max-width: 100%;
 	margin-top: 4rem;
-	margin-left: calc(50% - 50vw);
+	margin-left: 0;
 	padding: 4rem 0;
 	background:
 		linear-gradient(135deg, rgba(36,55,48,0.7), rgba(87,113,101,0.65)),
@@ -330,8 +332,9 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 		linear-gradient(120deg, rgba(22, 39, 33, 0.82), rgba(22, 39, 33, 0.7)),
 		url('images/Blurred Church Inside.jpeg') center/cover no-repeat;
 	color: #fff;
-	width: 100vw;
-	margin-left: calc(50% - 50vw);
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0;
 }
 .visit > * {
 	width: min(100% - 2.5rem, 74rem);
