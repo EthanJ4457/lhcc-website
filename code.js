@@ -39,8 +39,8 @@ if (contactForm) {
 			"",
 			message
 		].join("\n");
-
-		const mailtoLink = `mailto:lhcc.pastormarkj@gmail.com?subject=${encodeURIComponent(subject || "Website message")}&body=${encodeURIComponent(body)}`;
+// lhcc.pastormarkj@gmail.com
+		const mailtoLink = `mailto:ethanj4457@gmail.com?subject=${encodeURIComponent(subject || "Website message")}&body=${encodeURIComponent(body)}`;
 		window.location.href = mailtoLink;
 	});
 }
