@@ -7,9 +7,133 @@
 	<title>Connect | Living Hope Community Church</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body class="site-inner">
-	<header class="site-header"><a class="brand" href="index.html" aria-label="Living Hope Community Church home"><img src="images/LHCC.png" alt="" class="brand-logo" aria-hidden="true"><span>Living Hope<br><small>Community Church Durham</small></span></a><button class="menu-toggle" type="button" aria-expanded="true" aria-controls="site-nav">Menu</button><nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="About Us.html">About</a><a href="Visiting.html">Plan Your Visit</a><a href="Connect.html">Connect</a><a href="Sermons.html">Sermons</a><a href="Give.html">Give</a></nav></header>
-	<main class="inner-page"><div class="section-shell"><p class="eyebrow">Stay connected</p><h1>Connect with us.</h1><p class="inner-page-copy">Find ways to stay in touch and take part in the life of our church.</p><div class="inner-page-panel"><h2>Get in touch</h2><p>This page is ready for contact details, social links, groups, and community updates.</p></div></div></main>
-	<footer class="site-footer"><div class="section-shell footer-bottom"><span>© 2026 Living Hope Community Church</span><a href="index.html">Return to main page</a></div></footer><script src="code.js"></script>
+<body class="site-inner about-page-body">
+	<header class="site-header">
+		<a class="brand" href="index.html" aria-label="Living Hope Community Church home">
+			<img src="images/LHCC.png" alt="" class="brand-logo" aria-hidden="true">
+			<span>Living Hope<br><small>Community Church Durham</small></span>
+		</a>
+		<button class="menu-toggle" type="button" aria-expanded="true" aria-controls="site-nav">Menu</button>
+		<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+			<a href="index.html">Home</a>
+			<a href="About Us.html">About</a>
+			<a href="Visiting.html">I'm New</a>
+			<a href="Connect.html">Connect</a>
+			<a href="Sermons.html">Sermons</a>
+			<a href="Give.html">Give</a>
+		</nav>
+	</header>
+
+	<main class="about-page-main">
+		<section class="about-hero">
+			<div class="section-shell about-hero-inner">
+				<p class="eyebrow">Contact us</p>
+				<h1>We’d love to hear from you.</h1>
+				<p>Whether you’re looking for prayer, want to know more about our church, or are seeking a place to belong, we’re glad to connect with you.</p>
+			</div>
+		</section>
+
+		<section class="section-shell about-section">
+			<div class="about-two-col">
+				<div>
+					<p class="eyebrow">Get in touch</p>
+					<h2>We’re here to walk with you and answer your questions.</h2>
+				</div>
+				<div>
+					<p>Living Hope is a church family that values real relationships, prayer, and care. We want to make it easy for you to connect with us, whether you are visiting, asking about ministry, or looking for support.</p>
+					<p>Feel free to send a message, give us a call, or stop by one of our gatherings. We would love to meet you and help you take the next step.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-shell about-section">
+			<p class="eyebrow">Reach us</p>
+			<div class="connect-detail-grid">
+				<article class="belief-card">
+					<h3>Visit</h3>
+					<p>209 Cochrane St.<br>Whitby, ON L1N 5H9</p>
+				</article>
+				<article class="belief-card">
+					<h3>Call</h3>
+					<p><a href="tel:+13652758863">365-275-8863</a><br>Pastor Mark Jallim</p>
+				</article>
+				<article class="belief-card">
+					<h3>Email</h3>
+					<p><a href="mailto:lhcc.pastormarkj@gmail.com">lhcc.pastormarkj@gmail.com</a><br><a href="mailto:lhcc.sydeldsouza@gmail.com">lhcc.sydeldsouza@gmail.com</a></p>
+				</article>
+			</div>
+		</section>
+
+		<section class="connect-message-panel">
+			<div class="section-shell">
+				<div class="about-two-col connect-form-wrap">
+					<div>
+						<p class="eyebrow">Stay connected</p>
+						<h2>Send us a message.</h2>
+						<p>We respect your privacy and will respond as soon as possible.</p>
+					</div>
+					<form class="connect-form" action="mailto:lhcc.pastormarkj@gmail.com" method="post" enctype="text/plain">
+						<div class="form-row">
+							<label>
+								<span>Your name</span>
+								<input type="text" name="name" placeholder="Your name" required>
+							</label>
+							<label>
+								<span>Email</span>
+								<input type="email" name="email" placeholder="you@example.com" required>
+								<small class="field-hint">Please enter a valid email address.</small>
+							</label>
+						</div>
+						<label>
+							<span>Subject</span>
+							<input type="text" name="subject" placeholder="How can we help?" required>
+						</label>
+						<label>
+							<span>Message</span>
+							<textarea name="message" rows="5" placeholder="Tell us a little about your question or prayer request..." required></textarea>
+						</label>
+						<div class="form-actions">
+							<button type="submit" class="button button-dark">Send message</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="section-shell footer-grid">
+			<div>
+				<p class="footer-title">Living Hope<br>Community Church</p>
+				<p>Durham Region<br>209 Cochrane St.<br>Whitby, ON L1N 5H9</p>
+			</div>
+			<div>
+				<p class="footer-title">Connect</p>
+				<div class="connect-list">
+					<p>Pastor Mark Jallim<br><a href="tel:+13652758863">365-275-8863</a><br>lhcc.pastormarkj@gmail.com</p>
+					<p>Sydel D’Souza<br><a href="mailto:lhcc.sydeldsouza@gmail.com">lhcc.sydeldsouza@gmail.com</a></p>
+				</div>
+			</div>
+			<div>
+				<p class="footer-title">Follow</p>
+				<div class="social-links">
+					<a class="social-btn social-facebook" href="https://www.facebook.com/LivingHopeCommunity.ca/" target="_blank" rel="noopener noreferrer">Facebook</a>
+					<a class="social-btn social-instagram" href="https://www.instagram.com/livinghopecommunitych/" target="_blank" rel="noopener noreferrer">Instagram</a>
+					<a class="social-btn social-youtube" href="https://www.youtube.com/@LHCC." target="_blank" rel="noopener noreferrer">YouTube</a>
+				</div>
+			</div>
+			<div>
+				<p class="footer-title">Explore</p>
+				<p><a href="index.html">Home</a><br><a href="About Us.html">About</a><br><a href="Visiting.html">I'm New</a><br><a href="Sermons.html">Sermons</a><br><a href="Give.html">Give</a></p>
+			</div>
+		</div>
+		<div class="section-shell footer-bottom">
+			<span>© 2026 Living Hope Community Church</span>
+			<a href="index.html">Return to main page</a>
+		</div>
+	</footer>
+
+	<script src="code.js"></script>
 </body>
 </html>
+

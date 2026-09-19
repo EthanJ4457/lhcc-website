@@ -75,8 +75,218 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 .inner-page-panel h2 { margin-top: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
 .inner-page-panel p:last-child { margin-bottom: 0; color: var(--muted); }
 
+.visit-page-body { background: var(--paper); }
+.visit-page-main { background: var(--paper); }
+.visit-page-hero {
+	padding: 11rem 0 5rem;
+	background: linear-gradient(135deg, rgba(24, 38, 33, 0.92), rgba(120, 142, 127, 0.82));
+	color: #fff;
+}
+.visit-page-hero-inner {
+	max-width: 58rem;
+}
+.visit-page-hero h1 {
+	margin: 0;
+	font-size: clamp(3rem, 6vw, 6rem);
+	line-height: 0.96;
+	letter-spacing: -0.04em;
+	color: #fff;
+}
+.visit-page-hero p:last-child {
+	max-width: 38rem;
+	margin-top: 1.5rem;
+	font-size: 1.15rem;
+	color: rgba(255,255,255,0.9);
+}
+.visit-page-intro {
+	padding-top: 5rem;
+}
+.visit-page-intro-copy {
+	max-width: 48rem;
+}
+.visit-page-intro h2 {
+	margin: 0 0 1rem;
+	font-size: clamp(2.2rem, 4vw, 4rem);
+	line-height: 1.02;
+	letter-spacing: -0.035em;
+}
+.visit-page-intro p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 1.08rem;
+}
+.visit-page-cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.5rem;
+	padding-top: 3rem;
+}
+.visit-info-card {
+	padding: 1.6rem;
+	border: 1px solid var(--line);
+	background: rgba(255,255,255,0.55);
+	box-shadow: 0 12px 28px rgba(24,39,35,0.04);
+}
+.visit-info-card .eyebrow {
+	color: var(--forest);
+	margin-bottom: 0.9rem;
+}
+.visit-info-card h3 {
+	margin: 0 0 0.8rem;
+	font-size: 1.55rem;
+	line-height: 1.1;
+	color: var(--forest);
+}
+.visit-info-card p, .visit-info-card span {
+	margin: 0;
+	color: var(--muted);
+}
+.visit-address {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin-top: 1.2rem;
+	padding-top: 1rem;
+	border-top: 1px solid rgba(41,68,58,0.12);
+	font: 700 0.8rem Arial, sans-serif;
+	letter-spacing: 0.04em;
+	color: var(--forest);
+}
+.visit-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+.button-light-passive {
+	border-color: rgba(41,68,58,0.25);
+	color: var(--forest);
+	background: rgba(41,68,58,0.04);
+}
+.button-light-passive:hover, .button-light-passive:focus-visible {
+	background: var(--forest);
+	color: #fff;
+}
+.visit-page-callout {
+	margin-top: 4rem;
+	padding: 4rem 0;
+	background: linear-gradient(135deg, rgba(35,55,48,0.96), rgba(90,110,101,0.72));
+	color: #fff;
+}
+.visit-page-callout-inner {
+	display: grid;
+	grid-template-columns: 0.9fr 1.1fr;
+	gap: 2rem;
+	align-items: center;
+}
+.visit-page-callout h2 {
+	margin: 0;
+	font-size: clamp(2rem, 4vw, 4rem);
+	line-height: 1.02;
+	letter-spacing: -0.035em;
+}
+.visit-callout-details {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+}
+.visit-callout-details p, .visit-callout-details a {
+	margin: 0;
+	color: rgba(255,255,255,0.9);
+}
+.visit-callout-details a {
+	text-decoration: none;
+	font-weight: 700;
+}
+
+@media (max-width: 900px) {
+	.visit-page-cards,
+	.visit-page-callout-inner {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 700px) {
+	.visit-page-hero {
+		padding-top: 9rem;
+	}
+	.visit-page-cards {
+		grid-template-columns: 1fr;
+	}
+}
+
 .about-page-body { background: var(--paper); }
 .about-page-main { background: var(--paper); }
+.connect-detail-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+.connect-detail-grid .belief-card h3 {
+	margin-bottom: 0.75rem;
+}
+.connect-detail-grid .belief-card a {
+	color: var(--forest);
+	text-decoration: none;
+}
+.connect-detail-grid .belief-card a:hover,
+.connect-detail-grid .belief-card a:focus-visible {
+	text-decoration: underline;
+}
+.connect-message-panel {
+	padding: 5rem 0 6rem;
+}
+.connect-form-wrap {
+	align-items: center;
+}
+.connect-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 2rem;
+	background: rgba(255,255,255,0.7);
+	border: 1px solid var(--line);
+	box-shadow: 0 12px 28px rgba(24,39,35,0.04);
+}
+.connect-form label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+	font: 700 0.76rem Arial, sans-serif;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--forest);
+}
+.field-hint {
+	display: block;
+	margin-top: 0.2rem;
+	font: 700 0.64rem Arial, sans-serif;
+	letter-spacing: 0.04em;
+	text-transform: none;
+	color: rgba(41,68,58,0.7);
+}
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+.connect-form input,
+.connect-form textarea {
+	padding: 0.9rem 1rem;
+	border: 1px solid rgba(41,68,58,0.2);
+	background: rgba(255,255,255,0.8);
+	font: inherit;
+	color: var(--ink);
+}
+.connect-form input:focus,
+.connect-form textarea:focus {
+	outline: 2px solid rgba(41,68,58,0.2);
+	outline-offset: 2px;
+}
+.form-actions {
+	margin-top: 0.5rem;
+}
 .about-hero {
 	padding: 11rem 0 5rem;
 	background: linear-gradient(135deg, rgba(34,52,46,0.92), rgba(129,146,125,0.78));
@@ -286,6 +496,7 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	margin-top: 1rem;
 	border-color: var(--forest);
 	color: var(--forest);
+	position: center bottom;
 }
 .button-dark:hover, .button-dark:focus-visible {
 	background: var(--forest);
@@ -296,7 +507,9 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	.about-two-col,
 	.belief-grid,
 	.practice-grid,
-	.team-grid {
+	.team-grid,
+	.connect-detail-grid,
+	.form-row {
 		grid-template-columns: 1fr 1fr;
 	}
 }
@@ -308,13 +521,18 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	.about-two-col,
 	.belief-grid,
 	.practice-grid,
-	.team-grid {
+	.team-grid,
+	.connect-detail-grid,
+	.form-row {
 		grid-template-columns: 1fr;
 	}
 	.about-section,
 	.beliefs-band,
 	.join-cta {
 		padding-top: 4rem;
+	}
+	.connect-form {
+		padding: 1.25rem;
 	}
 	.vision-band {
 		background-position: center center;
