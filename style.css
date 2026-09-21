@@ -676,11 +676,19 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	border: 0;
 }
 
-@media (max-width: 900px) {
-	.give-method-grid {
-		grid-template-columns: 1fr 1fr;
-	}
-	.give-mission-inner {
+.give-method-card,
+.give-mission-copy,
+.sermon-feature-copy,
+.sermon-feature-panel,
+.sermon-series-card {
+	min-width: 0;
+}
+
+@media (max-width: 980px) {
+	.give-method-grid,
+	.give-mission-inner,
+	.sermon-feature-inner,
+	.sermon-series-grid {
 		grid-template-columns: 1fr;
 	}
 }
@@ -804,6 +812,7 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 }
 .sermon-series-wrap {
 	padding-top: 5rem;
+	padding-bottom: 3rem;
 }
 .sermon-section-head {
 	margin-bottom: 1.5rem;
@@ -860,7 +869,9 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	margin-bottom: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
+	.give-method-grid,
+	.give-mission-inner,
 	.about-two-col,
 	.belief-grid,
 	.practice-grid,
@@ -869,23 +880,13 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	.form-row,
 	.sermon-feature-inner,
 	.sermon-series-grid {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 	}
 }
 
 @media (max-width: 700px) {
 	.sermon-page-hero {
 		padding-top: 9rem;
-	}
-	.sermon-feature-inner,
-	.sermon-series-grid,
-	.about-two-col,
-	.belief-grid,
-	.practice-grid,
-	.team-grid,
-	.connect-detail-grid,
-	.form-row {
-		grid-template-columns: 1fr;
 	}
 	.sermon-feature-copy,
 	.sermon-feature-panel,
@@ -895,14 +896,6 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	}
 	.about-hero {
 		padding-top: 9rem;
-	}
-	.about-two-col,
-	.belief-grid,
-	.practice-grid,
-	.team-grid,
-	.connect-detail-grid,
-	.form-row {
-		grid-template-columns: 1fr;
 	}
 	.about-section,
 	.beliefs-band,
