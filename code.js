@@ -18,29 +18,57 @@ if (contactForm) {
 		emailInput.setAttribute("inputmode", "email");
 	}
 
-	contactForm.addEventListener("submit", function (event) {
+	contactForm.addEventListener("submit", async function (event) {
 		event.preventDefault();
 
-		const formData = new FormData(contactForm);
-		const name = (formData.get("name") || "").toString().trim();
-		const email = (formData.get("email") || "").toString().trim();
-		const subject = (formData.get("subject") || "").toString().trim();
-		const message = (formData.get("message") || "").toString().trim();
+		const emailValue = (emailInput?.value || "").trim();
 
-		if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+		if (!emailValue || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
 			emailInput?.focus();
 			emailInput?.reportValidity();
 			return;
 		}
 
-		const body = [
-			"Name: " + name,
-			"Email: " + email,
-			"",
-			message
-		].join("\n");
-// lhcc.pastormarkj@gmail.com
-		const mailtoLink = `mailto:ethanj4457@gmail.com?subject=${encodeURIComponent(subject || "Website message")}&body=${encodeURIComponent(body)}`;
-		window.location.href = mailtoLink;
+		const formData = new FormData(contactForm);
+
+		try {
+			const response = await fetch(contactForm.action, {
+				method: "POST",
+				body: formData,
+				headers: {
+					Accept: "application/json"
+				}
+			});
+
+			if (!response.ok) {
+				throw new Error("Form submission failed");
+			}
+
+			contactForm.reset();
+
+			let status = contactForm.parentElement.querySelector(".form-status");
+			if (!status) {
+				status = document.createElement("p");
+				status.className = "form-status success";
+				contactForm.insertAdjacentElement("afterend", status);
+			} else {
+				status.className = "form-status success";
+			}
+
+			status.textContent = "Thanks for your message! We’ll be in touch soon.";
+		} catch (error) {
+			console.error("Form submission failed:", error);
+
+			let status = contactForm.parentElement.querySelector(".form-status");
+			if (!status) {
+				status = document.createElement("p");
+				status.className = "form-status error";
+				contactForm.insertAdjacentElement("afterend", status);
+			} else {
+				status.className = "form-status error";
+			}
+
+			status.textContent = "Something went wrong. Please email us directly instead.";
+		}
 	});
 }
