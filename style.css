@@ -564,7 +564,7 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	gap: 0.9rem;
 	padding: 2rem;
 	border: 1px solid rgba(255,255,255,0.18);
-	background: linear-gradient(135deg, rgba(30,48,42,0.92), rgba(129,146,125,0.78));
+	background: linear-gradient(135deg, rgba(30,48,42,0.80), rgba(129,146,125,0.65));
 	box-shadow: 0 12px 28px rgba(24,39,35,0.04);
 	color: #ffffff;
 }
@@ -589,7 +589,12 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	padding-top: 1rem;
 	border-top: 1px solid rgba(255,255,255,0.22);
 }
-.give-card-meta a,
+.give-card-meta a{
+	color: #ffffffdd;
+	font: 800 1rem Arial, sans-serif;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+}
 .give-card-meta span {
 	color: #ffffffdd;
 	font: 700 0.78rem Arial, sans-serif;
@@ -766,6 +771,11 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 .sermon-series-card li,
 .sermon-links-panel p {
 	color: var(--muted);
+}
+
+.sermon-current-pastor{
+	font: 700 0.90rem Arial, sans-serif;
+	letter-spacing: 0.08em;
 }
 .sermon-links {
 	display: flex;
