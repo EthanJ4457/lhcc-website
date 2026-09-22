@@ -57,24 +57,38 @@ const parseVideoLine = function (line) {
 	};
 };
 
+const fallbackSpeakerFiles = [
+	"Abigail-Jallim.txt",
+	"Nikita Abraham.txt",
+	"Other.txt"
+];
+
 const loadGuestSpeakers = async function () {
 	if (!guestSelect || !guestResults) {
 		return;
 	}
 
 	try {
-		const directoryResponse = await fetch("Speakers/");
-		if (!directoryResponse.ok) {
-			throw new Error("Could not load the speaker directory");
-		}
+		let fileLinks = fallbackSpeakerFiles.map((fileName) => new URL(fileName, `${window.location.origin}${window.location.pathname.replace(/\/[^/]*$/, "")}/Speakers/`).toString());
 
-		const directoryHtml = await directoryResponse.text();
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(directoryHtml, "text/html");
-		const fileLinks = [...doc.querySelectorAll("a")]
-			.map((link) => link.getAttribute("href"))
-			.filter((href) => href && href.toLowerCase().endsWith(".txt"))
-			.map((href) => new URL(href, directoryResponse.url).toString());
+		try {
+			const directoryResponse = await fetch("Speakers/");
+			if (directoryResponse.ok) {
+				const directoryHtml = await directoryResponse.text();
+				const parser = new DOMParser();
+				const doc = parser.parseFromString(directoryHtml, "text/html");
+				const discoveredLinks = [...doc.querySelectorAll("a")]
+					.map((link) => link.getAttribute("href"))
+					.filter((href) => href && href.toLowerCase().endsWith(".txt"))
+					.map((href) => new URL(href, directoryResponse.url).toString());
+
+				if (discoveredLinks.length) {
+					fileLinks = discoveredLinks;
+				}
+			}
+		} catch (directoryError) {
+			console.warn("Guest speaker directory listing is unavailable; using fallback speaker files.", directoryError);
+		}
 
 		const speakers = [];
 
