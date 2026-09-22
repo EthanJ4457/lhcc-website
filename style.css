@@ -823,9 +823,20 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1.5rem;
+	align-items: stretch;
+}
+.sermon-series-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 1.5rem;
+	border: 1px solid var(--line);
+	background: rgba(255,255,255,0.7);
+	box-shadow: 0 12px 28px rgba(24,39,35,0.04);
 }
 .sermon-series-card h3 {
 	margin: 0 0 1rem;
+	min-height: 3.2rem;
 	font-size: 1.5rem;
 	line-height: 1.1;
 	color: var(--forest);
@@ -838,11 +849,14 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	margin-bottom: 0.9rem;
 	border: 1px solid rgba(41,68,58,0.14);
 	background: rgba(20, 35, 30, 0.08);
+	flex-shrink: 0;
 }
-.sermon-video iframe {
+.sermon-video iframe,
+.sermon-video img {
 	display: block;
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 	border: 0;
 }
 .sermon-watch-link {
@@ -862,6 +876,7 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	margin: 0;
 	padding-left: 1.15rem;
 	list-style: disc;
+	flex: 1;
 }
 .sermon-series-card li {
 	margin-bottom: 0.5rem;
