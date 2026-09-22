@@ -886,6 +886,85 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	margin-bottom: 0;
 }
 
+.guest-speaker-section {
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+}
+.guest-speaker-controls {
+	display: block;
+	margin-bottom: 1.5rem;
+}
+.guest-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font: 700 0.72rem Arial, sans-serif;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--forest);
+}
+.guest-field select {
+	width: 100%;
+	padding: 0.9rem 1rem;
+	border: 1px solid rgba(41,68,58,0.2);
+	background: rgba(255,255,255,0.8);
+	font: 1rem Georgia, "Times New Roman", serif;
+	color: var(--ink);
+}
+.guest-speaker-results {
+	display: block;
+}
+.guest-speaker-empty {
+	padding: 1.5rem;
+	border: 1px solid var(--line);
+	background: rgba(255,255,255,0.65);
+	color: var(--muted);
+}
+.guest-speaker-name {
+	margin: 0 0 1.25rem;
+	font-size: clamp(2rem, 3vw, 3rem);
+	line-height: 1.05;
+	letter-spacing: -0.03em;
+	color: var(--forest);
+}
+.guest-video-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+.guest-video-card {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border: 1px solid var(--line);
+	background: rgba(255,255,255,0.7);
+	box-shadow: 0 12px 28px rgba(24,39,35,0.04);
+}
+.guest-video-frame {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+	margin-bottom: 0.9rem;
+	border: 1px solid rgba(41,68,58,0.14);
+	background: rgba(20, 35, 30, 0.08);
+}
+.guest-video-frame iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.guest-video-copy h3 {
+	margin: 0 0 0.25rem;
+	font-size: 1.2rem;
+	line-height: 1.2;
+	color: var(--forest);
+}
+.guest-video-copy p {
+	margin: 0;
+	color: var(--muted);
+}
+
 @media (max-width: 980px) {
 	.give-method-grid,
 	.give-mission-inner,
