@@ -419,7 +419,7 @@ h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7.4rem); }
 	max-width: 100%;
 	margin-top: 4rem;
 	margin-left: 0;
-	padding: 4rem 0;
+	padding: 5rem 0;
 	background:
 		linear-gradient(rgba(44, 77, 56, 0.604), rgba(44, 77, 56, 0.604)),
 		url('images/LHCC-group-photo.jpeg') center center / cover no-repeat;
