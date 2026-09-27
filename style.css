@@ -1163,6 +1163,7 @@ cite { font: .7rem Arial, sans-serif; text-transform: uppercase; letter-spacing:
 .social-youtube { background: linear-gradient(135deg, rgba(223,29,29,0.82), rgba(181,15,15,0.82)); color: #fff; }
 .social-facebook { background: linear-gradient(135deg, rgba(31,99,217,0.8), rgba(12,77,177,0.8)); color: #fff; }
 .social-instagram { background: linear-gradient(135deg, rgba(245,133,41,0.8), rgba(221,42,123,0.8) 38%, rgba(129,52,175,0.8) 72%, rgba(81,91,212,0.8)); color: #fff; }
+.social-spotify { background: linear-gradient(135deg, rgba(33, 201, 92, 0.8), rgba(33, 200, 92, 0.8)); color: #fff; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.2); color: #8e9e95; font: .65rem Arial, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
 
 @keyframes rise-in { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: translateY(0); } }
