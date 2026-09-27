@@ -142,7 +142,7 @@ const loadGuestSpeakers = async function () {
 					${speaker.sermons.map((sermon) => `
 						<article class="guest-video-card">
 							<div class="guest-video-frame">
-								<iframe src="${sermon.video}" title="${sermon.speaker} video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<iframe src="${sermon.video}" title="${sermon.speaker} video" loading="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
 							<div class="guest-video-copy">
 								<h3>${sermon.speaker}</h3>
